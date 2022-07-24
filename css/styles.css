@@ -8,6 +8,8 @@
 	--primery-backgraund-color: #ffffff;
 	--secondary-backgraund-color: #2f303a;
 	--third-backgraund-color: #f5f4fa;
+	--fours-text-color: #afb1b8;
+	--icon-bg-color: rgba(255, 255, 255, 0.1);
 }
 
 /* =========== Reseting Geometry and Styles ========== */
@@ -99,7 +101,6 @@ body {
 }
 .page-header-container {
 	display: flex;
-
 	align-items: center;
 	justify-content: space-between;
 }
@@ -114,6 +115,8 @@ body {
 }
 
 .menu-link {
+	display: flex;
+	align-items: center;
 	margin-left: auto;
 	font-weight: 500;
 	line-height: 1.14;
@@ -121,10 +124,7 @@ body {
 	color: var(--primery-text-color);
 }
 
-.menu-link:not(:last-child) {
-	margin-right: 50px;
-}
-
+.menu-link:not(:last-child),
 .menu-item:not(:last-child) {
 	margin-right: 50px;
 }
@@ -133,13 +133,15 @@ body {
 	color: var(--secondary-text-color);
 }
 
+.menu-item .current,
 .menu-link:hover,
 .menu-link:focus {
 	color: var(--accent-color);
 }
 
-.menu-item .current {
-	color: var(--accent-color);
+.menu-link-icon {
+	margin-right: 10px;
+	fill: currentColor;
 }
 
 .border {
@@ -149,10 +151,18 @@ body {
 /* ==========HERO================ */
 
 .hero {
+	margin-left: auto;
+	margin-right: auto;
 	padding-top: 200px;
 	padding-bottom: 200px;
 	text-align: center;
+	background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+		url("../images/hero/hero.jpg");
 	background-color: var(--secondary-backgraund-color);
+	max-width: 1600px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }
 
 .hero-title {
@@ -227,6 +237,23 @@ body {
 	color: var(--secondary-text-color);
 }
 
+.special-link {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+	height: 120px;
+	background: var(--third-backgraund-color);
+	border-radius: 4px;
+	margin-bottom: 30px;
+}
+
+.special-link-icon {
+	display: flex;
+	flex-wrap: wrap;
+	width: 70px;
+	height: 70px;
+}
 /* ==============LIST OFFER=========== */
 
 .about {
@@ -285,6 +312,68 @@ body {
 	color: var(--secondary-text-color);
 }
 
+.team-social-list {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	margin: 0px;
+	padding-bottom: 30px;
+}
+
+.team-social-link {
+	/* outline: 1px solid red; */
+	display: flex;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	justify-content: center;
+	align-items: center;
+	fill: var(--secondary-text-color);
+}
+
+.team-social-icon {
+	width: 20px;
+	height: 20px;
+}
+
+.team-social-link:hover,
+.team-social-link:focus {
+	fill: var(--primery-backgraund-color);
+	background-color: var(--accent-color);
+}
+
+/* ========ПОСТОЯННЫЕ КЛИЕНТЫ=========== */
+
+.clients-list {
+	/* outline: 1px solid teal; */
+	display: flex;
+	gap: 30px;
+	justify-content: center;
+}
+
+.clients-link {
+	display: flex;
+	width: 170px;
+	height: 92px;
+	justify-content: center;
+	align-items: center;
+	fill: var(--fours-text-color);
+	border-radius: 4px;
+	border: 1px solid var(--fours-text-color);
+}
+
+.clients-icon {
+	width: 106px;
+	height: 60px;
+	/* outline: 1px solid teal; */
+}
+
+.clients-link:hover,
+.clients-link:focus {
+	fill: var(--accent-color);
+	border: 1px solid var(--accent-color);
+}
+
 /* =============FOOTER================= */
 
 .footer .logo {
@@ -320,6 +409,65 @@ body {
 .adress-link:focus {
 	color: var(--accent-color);
 }
+
+/* ---------------------------- */
+.footer-address-social {
+	display: flex;
+}
+
+.social {
+	/* outline: 1px solid teal; */
+	margin-left: 70px;
+}
+
+.social-title {
+	/* outline: 1px solid teal; */
+	margin-bottom: 20px;
+	font-size: 14px;
+	line-height: 1.14;
+	text-transform: uppercase;
+	font-style: normal;
+	color: var(--third-text-color);
+}
+
+.social-list {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+
+.social-link {
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+	fill: var(--third-text-color);
+}
+
+.social-item {
+	display: flex;
+	flex-wrap: wrap;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	background: var(--icon-bg-color);
+}
+
+.social-item-logo {
+	width: 20px;
+	height: 20px;
+}
+
+.social-link:hover,
+.social-link:focus {
+	background: var(--accent-color);
+}
+
 /* =============PORTFOLIO============= */
 
 .portfolio-filtr {
