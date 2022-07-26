@@ -544,6 +544,7 @@ body {
 
 .portfolio-link {
 	display: block;
+	max-width: 100%;
 	background-color: var(--primery-backgraund-color);
 }
 
